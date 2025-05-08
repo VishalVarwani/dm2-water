@@ -7,7 +7,7 @@ SELECT
   ROUND(AVG(Turbidity), 2) AS avg_turbidity,
   -- Example scoring: higher DO and pH around 7 is good, lower turbidity is good
   ROUND(
-    0.4 * AVG(Dissolved_Oxygen) +
+    0.4 * AVG(`Dissolved Oxygen`) +
     0.3 * (7 - ABS(7 - AVG(pH))) +
     0.3 * (10 - AVG(Turbidity))
   , 2) AS health_score
