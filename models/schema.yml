@@ -6,6 +6,7 @@ sources:
     schema: river_data_analytics
     tables:
       - name: live_weather
+      - name: river_weather  # required for the new insights
 
 models:
   - name: avg_temperature
@@ -17,3 +18,18 @@ models:
       - name: avg_temp
         tests:
           - not_null
+
+  - name: daily_environmental_summary
+    description: "Aggregated daily values for all river and weather metrics"
+
+  - name: river_weather_correlation
+    description: "Correlations between weather parameters and river conditions"
+
+  - name: temp_oxygen_relationship
+    description: "Impact of temperature on dissolved oxygen levels"
+
+  - name: wind_vs_water_quality
+    description: "Grouped metrics like turbidity and pH by windspeed bands"
+
+  - name: environmental_health_score
+    description: "Composite index score representing overall river environmental health"

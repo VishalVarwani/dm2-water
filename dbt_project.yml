@@ -31,4 +31,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   weather_dbt:
-    +materialized: view
+    +materialized: view  # default for all models
+    river_insights:
+      +materialized: view  # materialization for insights

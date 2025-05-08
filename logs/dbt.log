@@ -72,3 +72,77 @@ GROUP BY city, DATE(timestamp);
 [0m13:05:39.203442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF13A2A850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF13A2A110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF0D06F0D0>]}
 [0m13:05:39.204689 [debug] [MainThread]: Flushing usage events
 [0m13:05:39.714382 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:09:35.815480 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A4DC86810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A4DCF97D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A4DCC8FD0>]}
+
+
+============================== 13:09:35.819097 | 98be744b-e971-4b2d-aa2c-aa12d657be18 ==============================
+[0m13:09:35.819097 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:09:35.820276 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Vishal\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Vishal\\Desktop\\dm2-water\\weather-dbt\\logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run --select avg_temperature', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:09:38.113773 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '98be744b-e971-4b2d-aa2c-aa12d657be18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A691BD290>]}
+[0m13:09:38.181269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '98be744b-e971-4b2d-aa2c-aa12d657be18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A4A849710>]}
+[0m13:09:38.182438 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m13:09:38.681641 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m13:09:38.967878 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:09:38.969077 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:09:39.015823 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '98be744b-e971-4b2d-aa2c-aa12d657be18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A6A717DD0>]}
+[0m13:09:39.197401 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Vishal\Desktop\dm2-water\weather-dbt\target\manifest.json
+[0m13:09:39.201742 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Vishal\Desktop\dm2-water\weather-dbt\target\semantic_manifest.json
+[0m13:09:39.230564 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '98be744b-e971-4b2d-aa2c-aa12d657be18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A4D0499D0>]}
+[0m13:09:39.231116 [info ] [MainThread]: Found 1 model, 2 data tests, 1 source, 491 macros
+[0m13:09:39.231700 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '98be744b-e971-4b2d-aa2c-aa12d657be18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A6940AF10>]}
+[0m13:09:39.233478 [info ] [MainThread]: 
+[0m13:09:39.234084 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:09:39.234759 [info ] [MainThread]: 
+[0m13:09:39.236023 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m13:09:39.237742 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dm2-water'
+[0m13:09:39.237742 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:09:39.714271 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dm2-water_river_data_analytics'
+[0m13:09:39.715278 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:09:40.193370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '98be744b-e971-4b2d-aa2c-aa12d657be18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A4C7A4090>]}
+[0m13:09:40.193965 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:09:40.234033 [debug] [Thread-1 (]: Began running node model.weather_dbt.avg_temperature
+[0m13:09:40.235141 [info ] [Thread-1 (]: 1 of 1 START sql view model river_data_analytics.avg_temperature ............... [RUN]
+[0m13:09:40.236430 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.weather_dbt.avg_temperature'
+[0m13:09:40.237033 [debug] [Thread-1 (]: Began compiling node model.weather_dbt.avg_temperature
+[0m13:09:40.245169 [debug] [Thread-1 (]: Writing injected SQL for node "model.weather_dbt.avg_temperature"
+[0m13:09:40.246508 [debug] [Thread-1 (]: Began executing node model.weather_dbt.avg_temperature
+[0m13:09:40.278966 [debug] [Thread-1 (]: Writing runtime sql for node "model.weather_dbt.avg_temperature"
+[0m13:09:40.280351 [debug] [Thread-1 (]: On model.weather_dbt.avg_temperature: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.avg_temperature"} */
+
+
+  create or replace view `dm2-water`.`river_data_analytics`.`avg_temperature`
+  OPTIONS()
+  as SELECT
+  city,
+  DATE(timestamp) AS date,
+  AVG(temperature) AS avg_temp,
+  MAX(humidity) AS max_humidity,
+  MIN(windspeed) AS min_windspeed
+FROM `dm2-water`.`river_data_analytics`.`live_weather`
+GROUP BY city, DATE(timestamp);
+
+
+[0m13:09:40.281510 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:09:41.072864 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dm2-water&j=bq:US:c0709d4b-c4f3-4319-a7e8-1f6a79fccd1e&page=queryresults
+[0m13:09:41.841477 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '98be744b-e971-4b2d-aa2c-aa12d657be18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A69366CD0>]}
+[0m13:09:41.842164 [info ] [Thread-1 (]: 1 of 1 OK created sql view model river_data_analytics.avg_temperature .......... [[32mCREATE VIEW (0 processed)[0m in 1.60s]
+[0m13:09:41.843390 [debug] [Thread-1 (]: Finished running node model.weather_dbt.avg_temperature
+[0m13:09:41.844677 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:09:41.878368 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:09:41.879004 [debug] [MainThread]: Connection 'list_dm2-water' was properly closed.
+[0m13:09:41.879652 [debug] [MainThread]: Connection 'list_dm2-water_river_data_analytics' was properly closed.
+[0m13:09:41.880331 [debug] [MainThread]: Connection 'model.weather_dbt.avg_temperature' was properly closed.
+[0m13:09:41.881508 [info ] [MainThread]: 
+[0m13:09:41.882102 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.65 seconds (2.65s).
+[0m13:09:41.883351 [debug] [MainThread]: Command end result
+[0m13:09:41.903343 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Vishal\Desktop\dm2-water\weather-dbt\target\manifest.json
+[0m13:09:41.907791 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Vishal\Desktop\dm2-water\weather-dbt\target\semantic_manifest.json
+[0m13:09:41.917067 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Vishal\Desktop\dm2-water\weather-dbt\target\run_results.json
+[0m13:09:41.917692 [info ] [MainThread]: 
+[0m13:09:41.919743 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:09:41.920333 [info ] [MainThread]: 
+[0m13:09:41.921650 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m13:09:41.923907 [debug] [MainThread]: Command `dbt run` succeeded at 13:09:41.923392 after 6.20 seconds
+[0m13:09:41.924514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A4710D790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A4DCFA3D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A4DCFA150>]}
+[0m13:09:41.925275 [debug] [MainThread]: Flushing usage events
+[0m13:09:42.430008 [debug] [MainThread]: An error was encountered while trying to flush usage events
