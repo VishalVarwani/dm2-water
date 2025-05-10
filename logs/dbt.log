@@ -403,3 +403,261 @@ GROUP BY wind_band
 [0m22:40:09.348780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002502FCEA850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002502914D790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002502FCBA6D0>]}
 [0m22:40:09.349386 [debug] [MainThread]: Flushing usage events
 [0m22:40:10.200872 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:46:25.105503 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA94298450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA94299CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA94299190>]}
+
+
+============================== 22:46:25.111519 | fd865f3f-e7c3-461c-95ab-1c157ada0256 ==============================
+[0m22:46:25.111519 [info ] [MainThread]: Running with dbt=1.9.4
+[0m22:46:25.113557 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Vishal\\.dbt', 'log_path': 'C:\\Users\\Vishal\\Desktop\\dm2-water\\weather-dbt\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --select river_insights', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m22:46:33.401150 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fd865f3f-e7c3-461c-95ab-1c157ada0256', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA93640290>]}
+[0m22:46:33.734541 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fd865f3f-e7c3-461c-95ab-1c157ada0256', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA90DD5D50>]}
+[0m22:46:33.737674 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m22:46:36.694417 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m22:46:37.717237 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m22:46:37.720660 [debug] [MainThread]: Partial parsing: updated file: weather_dbt://models\river_insights\environmental_health_score.sql
+[0m22:46:37.723144 [debug] [MainThread]: Partial parsing: updated file: weather_dbt://models\river_insights\temp_oxygen_relationship.sql
+[0m22:46:39.287491 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fd865f3f-e7c3-461c-95ab-1c157ada0256', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAB119E4D0>]}
+[0m22:46:39.580067 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Vishal\Desktop\dm2-water\weather-dbt\target\manifest.json
+[0m22:46:39.589905 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Vishal\Desktop\dm2-water\weather-dbt\target\semantic_manifest.json
+[0m22:46:39.697166 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fd865f3f-e7c3-461c-95ab-1c157ada0256', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAB1219E50>]}
+[0m22:46:39.700137 [info ] [MainThread]: Found 6 models, 2 data tests, 2 sources, 491 macros
+[0m22:46:39.702819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fd865f3f-e7c3-461c-95ab-1c157ada0256', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAB12A6390>]}
+[0m22:46:39.710419 [info ] [MainThread]: 
+[0m22:46:39.713448 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:46:39.716601 [info ] [MainThread]: 
+[0m22:46:39.721626 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:46:39.788963 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dm2-water'
+[0m22:46:39.791289 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:46:40.682047 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dm2-water_river_data_analytics'
+[0m22:46:40.688617 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:46:41.595925 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fd865f3f-e7c3-461c-95ab-1c157ada0256', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAB11AC450>]}
+[0m22:46:41.600202 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:46:41.833803 [debug] [Thread-1 (]: Began running node model.weather_dbt.daily_environmental_summary
+[0m22:46:41.835739 [debug] [Thread-2 (]: Began running node model.weather_dbt.environmental_health_score
+[0m22:46:41.837354 [debug] [Thread-3 (]: Began running node model.weather_dbt.river_weather_correlation
+[0m22:46:41.838913 [debug] [Thread-4 (]: Began running node model.weather_dbt.temp_oxygen_relationship
+[0m22:46:41.840703 [info ] [Thread-1 (]: 1 of 5 START sql table model river_data_analytics.daily_environmental_summary .. [RUN]
+[0m22:46:41.843106 [info ] [Thread-2 (]: 2 of 5 START sql table model river_data_analytics.environmental_health_score ... [RUN]
+[0m22:46:41.845237 [info ] [Thread-3 (]: 3 of 5 START sql table model river_data_analytics.river_weather_correlation .... [RUN]
+[0m22:46:41.853127 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.weather_dbt.daily_environmental_summary'
+[0m22:46:41.850013 [info ] [Thread-4 (]: 4 of 5 START sql table model river_data_analytics.temp_oxygen_relationship ..... [RUN]
+[0m22:46:41.867767 [debug] [Thread-1 (]: Began compiling node model.weather_dbt.daily_environmental_summary
+[0m22:46:41.858933 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.weather_dbt.river_weather_correlation'
+[0m22:46:41.856907 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.weather_dbt.environmental_health_score'
+[0m22:46:41.876742 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.weather_dbt.temp_oxygen_relationship'
+[0m22:46:41.917402 [debug] [Thread-1 (]: Writing injected SQL for node "model.weather_dbt.daily_environmental_summary"
+[0m22:46:41.919218 [debug] [Thread-3 (]: Began compiling node model.weather_dbt.river_weather_correlation
+[0m22:46:41.921448 [debug] [Thread-2 (]: Began compiling node model.weather_dbt.environmental_health_score
+[0m22:46:41.924493 [debug] [Thread-4 (]: Began compiling node model.weather_dbt.temp_oxygen_relationship
+[0m22:46:41.936232 [debug] [Thread-1 (]: Began executing node model.weather_dbt.daily_environmental_summary
+[0m22:46:41.961959 [debug] [Thread-3 (]: Writing injected SQL for node "model.weather_dbt.river_weather_correlation"
+[0m22:46:41.978029 [debug] [Thread-2 (]: Writing injected SQL for node "model.weather_dbt.environmental_health_score"
+[0m22:46:42.016477 [debug] [Thread-4 (]: Writing injected SQL for node "model.weather_dbt.temp_oxygen_relationship"
+[0m22:46:42.018715 [debug] [Thread-3 (]: Began executing node model.weather_dbt.river_weather_correlation
+[0m22:46:42.022521 [debug] [Thread-2 (]: Began executing node model.weather_dbt.environmental_health_score
+[0m22:46:42.050370 [debug] [Thread-4 (]: Began executing node model.weather_dbt.temp_oxygen_relationship
+[0m22:46:42.094956 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:46:42.120830 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m22:46:42.248355 [debug] [Thread-4 (]: Writing runtime sql for node "model.weather_dbt.temp_oxygen_relationship"
+[0m22:46:42.254788 [debug] [Thread-2 (]: Writing runtime sql for node "model.weather_dbt.environmental_health_score"
+[0m22:46:42.737532 [debug] [Thread-4 (]: On model.weather_dbt.temp_oxygen_relationship: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.temp_oxygen_relationship"} */
+
+  
+    
+
+    create or replace table `dm2-water`.`river_data_analytics`.`temp_oxygen_relationship`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT
+  Weather_Temperature AS air_temp,
+  `Dissolved Oxygen` AS do_level
+FROM `dm2-water`.`river_data_analytics`.`river_weather`
+WHERE Weather_Temperature IS NOT NULL AND Dissolved_Oxygen IS NOT NULL
+    );
+  
+[0m22:46:42.740298 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m22:46:42.744000 [debug] [Thread-2 (]: On model.weather_dbt.environmental_health_score: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.environmental_health_score"} */
+
+  
+    
+
+    create or replace table `dm2-water`.`river_data_analytics`.`environmental_health_score`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT
+  DATE(Timestamp) AS date,
+  ROUND(AVG(Dissolved_Oxygen), 2) AS avg_do,
+  ROUND(AVG(pH), 2) AS avg_ph,
+  ROUND(AVG(Turbidity), 2) AS avg_turbidity,
+  -- Example scoring: higher DO and pH around 7 is good, lower turbidity is good
+  ROUND(
+    0.4 * AVG(`Dissolved Oxygen`) +
+    0.3 * (7 - ABS(7 - AVG(pH))) +
+    0.3 * (10 - AVG(Turbidity))
+  , 2) AS health_score
+FROM `dm2-water`.`river_data_analytics`.`river_weather`
+GROUP BY DATE(Timestamp)
+    );
+  
+[0m22:46:42.996981 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:46:43.582706 [debug] [Thread-1 (]: Writing runtime sql for node "model.weather_dbt.daily_environmental_summary"
+[0m22:46:43.589973 [debug] [Thread-1 (]: On model.weather_dbt.daily_environmental_summary: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.daily_environmental_summary"} */
+
+  
+    
+
+    create or replace table `dm2-water`.`river_data_analytics`.`daily_environmental_summary`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT
+  DATE(Timestamp) AS date,
+  ROUND(AVG(River_Temperature), 2) AS avg_river_temp,
+  ROUND(AVG(Weather_Temperature), 2) AS avg_weather_temp,
+  MIN(River_Temperature) AS min_river_temp,
+  MAX(River_Temperature) AS max_river_temp,
+  MIN(Weather_Temperature) AS min_weather_temp,
+  MAX(Weather_Temperature) AS max_weather_temp,
+  ROUND(AVG(Humidity), 2) AS avg_humidity,
+  ROUND(AVG(Turbidity), 2) AS avg_turbidity,
+  ROUND(AVG(pH), 2) AS avg_ph
+FROM `dm2-water`.`river_data_analytics`.`river_weather`
+GROUP BY DATE(Timestamp)
+    );
+  
+[0m22:46:43.605543 [debug] [Thread-3 (]: Writing runtime sql for node "model.weather_dbt.river_weather_correlation"
+[0m22:46:43.610571 [debug] [Thread-3 (]: On model.weather_dbt.river_weather_correlation: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.river_weather_correlation"} */
+
+  
+    
+
+    create or replace table `dm2-water`.`river_data_analytics`.`river_weather_correlation`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT
+  Weather_Temperature,
+  River_Temperature,
+  Turbidity,
+  pH
+FROM `dm2-water`.`river_data_analytics`.`river_weather`
+WHERE Weather_Temperature IS NOT NULL AND River_Temperature IS NOT NULL
+    );
+  
+[0m22:46:43.945118 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dm2-water&j=bq:US:58cb5711-5b27-4312-80a1-241222b01420&page=queryresults
+[0m22:46:44.035849 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dm2-water&j=bq:US:437d2978-68a5-4d4f-b2e8-1c461702e861&page=queryresults
+[0m22:46:44.062217 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dm2-water&j=bq:US:a2344cd5-02ff-4f22-9ee9-f8a46a4394b2&page=queryresults
+[0m22:46:44.251297 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dm2-water&j=bq:US:1d86019c-6e76-4f1a-93c7-757f89234341&page=queryresults
+[0m22:46:44.253966 [error] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dm2-water&j=bq:US:58cb5711-5b27-4312-80a1-241222b01420&page=queryresults
+[0m22:46:44.285124 [error] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dm2-water&j=bq:US:437d2978-68a5-4d4f-b2e8-1c461702e861&page=queryresults
+[0m22:46:44.339607 [debug] [Thread-2 (]: Database Error in model environmental_health_score (models\river_insights\environmental_health_score.sql)
+  Unrecognized name: Dissolved_Oxygen; Did you mean Dissolved Oxygen? at [17:13]
+  compiled code at target\run\weather_dbt\models\river_insights\environmental_health_score.sql
+[0m22:46:44.348121 [debug] [Thread-4 (]: Database Error in model temp_oxygen_relationship (models\river_insights\temp_oxygen_relationship.sql)
+  Unrecognized name: Dissolved_Oxygen; Did you mean Dissolved Oxygen? at [19:43]
+  compiled code at target\run\weather_dbt\models\river_insights\temp_oxygen_relationship.sql
+[0m22:46:44.357508 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fd865f3f-e7c3-461c-95ab-1c157ada0256', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAB1389510>]}
+[0m22:46:44.358528 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fd865f3f-e7c3-461c-95ab-1c157ada0256', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAB1371B90>]}
+[0m22:46:44.363246 [error] [Thread-2 (]: 2 of 5 ERROR creating sql table model river_data_analytics.environmental_health_score  [[31mERROR[0m in 2.49s]
+[0m22:46:44.372997 [debug] [Thread-2 (]: Finished running node model.weather_dbt.environmental_health_score
+[0m22:46:44.366455 [error] [Thread-4 (]: 4 of 5 ERROR creating sql table model river_data_analytics.temp_oxygen_relationship  [[31mERROR[0m in 2.48s]
+[0m22:46:44.376697 [debug] [Thread-2 (]: Began running node model.weather_dbt.wind_vs_water_quality
+[0m22:46:44.379111 [debug] [Thread-7 (]: Marking all children of 'model.weather_dbt.environmental_health_score' to be skipped because of status 'error'.  Reason: Database Error in model environmental_health_score (models\river_insights\environmental_health_score.sql)
+  Unrecognized name: Dissolved_Oxygen; Did you mean Dissolved Oxygen? at [17:13]
+  compiled code at target\run\weather_dbt\models\river_insights\environmental_health_score.sql.
+[0m22:46:44.382922 [debug] [Thread-4 (]: Finished running node model.weather_dbt.temp_oxygen_relationship
+[0m22:46:44.388761 [info ] [Thread-2 (]: 5 of 5 START sql table model river_data_analytics.wind_vs_water_quality ........ [RUN]
+[0m22:46:44.394210 [debug] [Thread-7 (]: Marking all children of 'model.weather_dbt.temp_oxygen_relationship' to be skipped because of status 'error'.  Reason: Database Error in model temp_oxygen_relationship (models\river_insights\temp_oxygen_relationship.sql)
+  Unrecognized name: Dissolved_Oxygen; Did you mean Dissolved Oxygen? at [19:43]
+  compiled code at target\run\weather_dbt\models\river_insights\temp_oxygen_relationship.sql.
+[0m22:46:44.398408 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.weather_dbt.environmental_health_score, now model.weather_dbt.wind_vs_water_quality)
+[0m22:46:44.404993 [debug] [Thread-2 (]: Began compiling node model.weather_dbt.wind_vs_water_quality
+[0m22:46:44.427613 [debug] [Thread-2 (]: Writing injected SQL for node "model.weather_dbt.wind_vs_water_quality"
+[0m22:46:44.430742 [debug] [Thread-2 (]: Began executing node model.weather_dbt.wind_vs_water_quality
+[0m22:46:44.440329 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m22:46:45.086312 [debug] [Thread-2 (]: Writing runtime sql for node "model.weather_dbt.wind_vs_water_quality"
+[0m22:46:45.090025 [debug] [Thread-2 (]: On model.weather_dbt.wind_vs_water_quality: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.wind_vs_water_quality"} */
+
+  
+    
+
+    create or replace table `dm2-water`.`river_data_analytics`.`wind_vs_water_quality`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT
+  ROUND(`Wind Speed`, 0) AS wind_band,
+  COUNT(*) AS records,
+  ROUND(AVG(Turbidity), 2) AS avg_turbidity,
+  ROUND(AVG(pH), 2) AS avg_ph
+FROM `dm2-water`.`river_data_analytics`.`river_weather`
+GROUP BY wind_band
+    );
+  
+[0m22:46:45.614204 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dm2-water&j=bq:US:f31935b6-8d86-4083-875c-cf4262c72b79&page=queryresults
+[0m22:46:47.378448 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fd865f3f-e7c3-461c-95ab-1c157ada0256', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAB12C80D0>]}
+[0m22:46:47.381047 [info ] [Thread-3 (]: 3 of 5 OK created sql table model river_data_analytics.river_weather_correlation  [[32mCREATE TABLE (6.3k rows, 213.9 KiB processed)[0m in 5.52s]
+[0m22:46:47.384661 [debug] [Thread-3 (]: Finished running node model.weather_dbt.river_weather_correlation
+[0m22:46:47.942294 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fd865f3f-e7c3-461c-95ab-1c157ada0256', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAB1613ED0>]}
+[0m22:46:47.945840 [info ] [Thread-2 (]: 5 of 5 OK created sql table model river_data_analytics.wind_vs_water_quality ... [[32mCREATE TABLE (28.0 rows, 165.1 KiB processed)[0m in 3.54s]
+[0m22:46:47.949253 [debug] [Thread-2 (]: Finished running node model.weather_dbt.wind_vs_water_quality
+[0m22:47:06.168907 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fd865f3f-e7c3-461c-95ab-1c157ada0256', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAB13055D0>]}
+[0m22:47:06.173607 [info ] [Thread-1 (]: 1 of 5 OK created sql table model river_data_analytics.daily_environmental_summary  [[32mCREATE TABLE (329.0 rows, 336.7 KiB processed)[0m in 24.32s]
+[0m22:47:06.176697 [debug] [Thread-1 (]: Finished running node model.weather_dbt.daily_environmental_summary
+[0m22:47:06.183455 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:47:06.288874 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:47:06.291107 [debug] [MainThread]: Connection 'list_dm2-water' was properly closed.
+[0m22:47:06.292689 [debug] [MainThread]: Connection 'list_dm2-water_river_data_analytics' was properly closed.
+[0m22:47:06.293560 [debug] [MainThread]: Connection 'model.weather_dbt.daily_environmental_summary' was properly closed.
+[0m22:47:06.295780 [debug] [MainThread]: Connection 'model.weather_dbt.wind_vs_water_quality' was properly closed.
+[0m22:47:06.297780 [debug] [MainThread]: Connection 'model.weather_dbt.river_weather_correlation' was properly closed.
+[0m22:47:06.299644 [debug] [MainThread]: Connection 'model.weather_dbt.temp_oxygen_relationship' was properly closed.
+[0m22:47:06.301264 [info ] [MainThread]: 
+[0m22:47:06.304533 [info ] [MainThread]: Finished running 5 table models in 0 hours 0 minutes and 26.58 seconds (26.58s).
+[0m22:47:06.309476 [debug] [MainThread]: Command end result
+[0m22:47:06.382894 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Vishal\Desktop\dm2-water\weather-dbt\target\manifest.json
+[0m22:47:06.390562 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Vishal\Desktop\dm2-water\weather-dbt\target\semantic_manifest.json
+[0m22:47:06.408814 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Vishal\Desktop\dm2-water\weather-dbt\target\run_results.json
+[0m22:47:06.410952 [info ] [MainThread]: 
+[0m22:47:06.413542 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m22:47:06.415908 [info ] [MainThread]: 
+[0m22:47:06.418340 [error] [MainThread]:   Database Error in model environmental_health_score (models\river_insights\environmental_health_score.sql)
+  Unrecognized name: Dissolved_Oxygen; Did you mean Dissolved Oxygen? at [17:13]
+  compiled code at target\run\weather_dbt\models\river_insights\environmental_health_score.sql
+[0m22:47:06.420934 [info ] [MainThread]: 
+[0m22:47:06.423641 [error] [MainThread]:   Database Error in model temp_oxygen_relationship (models\river_insights\temp_oxygen_relationship.sql)
+  Unrecognized name: Dissolved_Oxygen; Did you mean Dissolved Oxygen? at [19:43]
+  compiled code at target\run\weather_dbt\models\river_insights\temp_oxygen_relationship.sql
+[0m22:47:06.426522 [info ] [MainThread]: 
+[0m22:47:06.429461 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=2 SKIP=0 TOTAL=5
+[0m22:47:06.434313 [debug] [MainThread]: Command `dbt run` failed at 22:47:06.434313 after 41.51 seconds
+[0m22:47:06.436801 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA8D67D790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA93E66890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA93BE5D10>]}
+[0m22:47:06.438851 [debug] [MainThread]: Flushing usage events
+[0m22:47:07.103364 [debug] [MainThread]: An error was encountered while trying to flush usage events
