@@ -6,30 +6,69 @@ sources:
     schema: river_data_analytics
     tables:
       - name: live_weather
-      - name: river_weather  # required for the new insights
+      - name: river_weather
 
 models:
-  - name: avg_temperature
-    description: "Daily weather summary"
+  - name: stg_live_weather
+    description: "Cleaned and renamed fields from raw live_weather table"
     columns:
+      - name: timestamp
+        tests: [not_null]
+      - name: temperature
+        tests: [not_null]
       - name: city
-        tests:
-          - not_null
-      - name: avg_temp
-        tests:
-          - not_null
+        tests: [not_null]
+
+  - name: stg_river_weather
+    description: "Cleaned and standardized fields from raw river_weather table"
+    columns:
+      - name: Timestamp
+        tests: [not_null]
+      - name: River_Temperature
+        tests: [not_null]
+
+  - name: int_weather_river_joined
+    description: "Joined and preprocessed table combining river and weather data"
+    columns:
+      - name: date
+        tests: [not_null]
+      - name: city
+        tests: [not_null]
 
   - name: daily_environmental_summary
-    description: "Aggregated daily values for all river and weather metrics"
+    description: "Daily average, min, max values for key environmental indicators"
+    columns:
+      - name: date
+        tests: [not_null, unique]
 
   - name: river_weather_correlation
-    description: "Correlations between weather parameters and river conditions"
+    description: "Computed correlation between river quality metrics and weather indicators"
+    columns:
+      - name: correlation_type
+        tests: [not_null]
 
   - name: temp_oxygen_relationship
-    description: "Impact of temperature on dissolved oxygen levels"
+    description: "Analyzes how temperature variations impact oxygen saturation"
+    columns:
+      - name: date
+        tests: [not_null]
 
   - name: wind_vs_water_quality
-    description: "Grouped metrics like turbidity and pH by windspeed bands"
+    description: "Compares water quality metrics across windspeed bands"
+    columns:
+      - name: wind_band
+        tests: [not_null]
 
   - name: environmental_health_score
-    description: "Composite index score representing overall river environmental health"
+    description: "Composite score based on normalized water quality metrics"
+    columns:
+      - name: score
+        tests: [not_null]
+
+  - name: avg_temperature
+    description: "Daily average temperature per city (from live_weather)"
+    columns:
+      - name: city
+        tests: [not_null]
+      - name: avg_temp
+        tests: [not_null]
