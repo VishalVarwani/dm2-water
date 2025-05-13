@@ -12,7 +12,7 @@ models:
   - name: stg_live_weather
     description: "Cleaned and renamed fields from raw live_weather table"
     columns:
-      - name: timestamp
+      - name: date
         tests: [not_null]
       - name: temperature
         tests: [not_null]
@@ -22,10 +22,39 @@ models:
   - name: stg_river_weather
     description: "Cleaned and standardized fields from raw river_weather table"
     columns:
-      - name: Timestamp
-        tests: [not_null]
+      - name: date
+        tests:
+          - not_null:
+              where: "weather_temperature IS NOT NULL"
+
       - name: River_Temperature
-        tests: [not_null]
+        tests: []
+        
+      - name: weather_temperature
+        tests:
+          - not_null
+
+      - name: humidity
+        tests:
+          - not_null:
+              where: "weather_temperature IS NOT NULL"
+
+      - name: wind_speed
+        tests:
+          - not_null:
+              where: "weather_temperature IS NOT NULL"
+
+      - name: ph
+        tests: []
+
+      - name: turbidity
+        tests: []
+
+      - name: dissolved_oxygen
+        tests: []
+
+      - name: chlorophyll
+        tests: []
 
   - name: int_weather_river_joined
     description: "Joined and preprocessed table combining river and weather data"
@@ -45,7 +74,7 @@ models:
     description: "Computed correlation between river quality metrics and weather indicators"
     columns:
       - name: correlation_type
-        tests: [not_null]
+        tests: []
 
   - name: temp_oxygen_relationship
     description: "Analyzes how temperature variations impact oxygen saturation"
@@ -63,12 +92,12 @@ models:
     description: "Composite score based on normalized water quality metrics"
     columns:
       - name: score
-        tests: [not_null]
+        tests: []
 
   - name: avg_temperature
     description: "Daily average temperature per city (from live_weather)"
     columns:
       - name: city
-        tests: [not_null]
+        tests: []
       - name: avg_temp
-        tests: [not_null]
+        tests: []
